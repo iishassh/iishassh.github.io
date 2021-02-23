@@ -23,12 +23,12 @@
           {%- set cheers = 'good' %}
         {% elif posts_length > 50 %}
           {%- set cheers = 'nice' %}
-        {% elif posts_length > 30 %}
+        {% elif posts_length >= 1 %}
           {%- set cheers = 'ok' %}
         {% else %}
           {%- set cheers = 'um' %}
         {%- endif %}
-        <span class="collection-header">{{ __('cheers.' + cheers) }}! {{ _p('counter.archive_posts', site.posts.length) }} {{ __('keep_on') }}</span>
+        <span class="collection-header">{{ _p('counter.archive_posts', site.posts.length) }} {{ __('cheers.' + cheers) }}！ {{ __('keep_on') }}</span>
       </div>
 
       {{ post_template.render(page.posts) }}
