@@ -118,12 +118,13 @@
           {%- endif %}
 
           {%- if not is_index and theme.busuanzi_count.enable and theme.busuanzi_count.post_views %}
-            <span class="post-meta-item" title="{{ __('post.views') }}" id="busuanzi_container_page_pv" style="display: none;">
+            <link rel="stylesheet" href="//cdn.bootcss.com/font-awesome/4.3.0/css/font-awesome.min.css">
+            <span class="post-meta-item" title="{{ __('post.views') }}" id="busuanzi_container_page_pv">
               <span class="post-meta-item-icon">
                 <i class="{{ theme.busuanzi_count.post_views_icon }}"></i>
               </span>
               <span class="post-meta-item-text">{{ __('post.views') + __('symbol.colon') }}</span>
-              <span id="busuanzi_value_page_pv"></span>
+              <span id="busuanzi_value_page_pv"><i class="fa fa-spinner fa-spin"></i></span>
             </span>
           {%- endif %}
 
