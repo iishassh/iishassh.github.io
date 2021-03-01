@@ -177,8 +177,9 @@ site_state: true
 # Key is the link label showing to end users.
 # Value before `||` delimiter is the target permalink, value after `||` delimiter is the name of Font Awesome icon.
 social:
-  GitHub: https://github.com/hasssssssh || fab fa-github
+  WeChat: https://s3.ax1x.com/2021/03/01/6i6h11.jpg || fab fa-weixin
   E-Mail: mailto:13221419330@163.com || fa fa-envelope
+  GitHub: https://github.com/hasssssssh || fab fa-github
   #Weibo: https://weibo.com/yourname || fab fa-weibo
   #Google: https://plus.google.com/yourname || fab fa-google
   #Twitter: https://twitter.com/yourname || fab fa-twitter
@@ -617,7 +618,7 @@ valine:
   appkey: soqJFEybNEksJwEYyabXRXUb
   notify: true # Mail notifier
   verify: false # Verification code
-  placeholder: 欢迎你的留言！本博客开启了留言提醒，我将会及时回复每一条友善的留言！ # Comment box placeholder
+  placeholder: 欢迎你的留言！本博客已开启留言提醒，我将会及时回复每一条友善的留言！ # Comment box placeholder
   avatar: wavatar # Gravatar style
   guest_info: nick,mail # Custom comment header
   pageSize: 10 # Pagination size
