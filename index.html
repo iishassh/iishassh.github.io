@@ -118,6 +118,11 @@
     <a href="/tags/" rel="section"><i class="fa fa-tags fa-fw"></i>Tags<span class="badge">2</span></a>
 
   </li>
+        <li class="menu-item menu-item-categories">
+
+    <a href="/categories/" rel="section"><i class="fa fa-th fa-fw"></i>Categories<span class="badge">0</span></a>
+
+  </li>
         <li class="menu-item menu-item-archives">
 
     <a href="/archives/" rel="section"><i class="fa fa-archive fa-fw"></i>Archives<span class="badge">3</span></a>
@@ -174,7 +179,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              <span class="post-meta-item-text">Posted on</span>
 
               <time title="创建时间：2021-03-18 11:49:09" itemprop="dateCreated datePublished" datetime="2021-03-18T11:49:09+08:00">2021-03-18</time>
             </span>
@@ -241,7 +246,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              <span class="post-meta-item-text">Posted on</span>
 
               <time title="创建时间：2021-02-19 11:49:09" itemprop="dateCreated datePublished" datetime="2021-02-19T11:49:09+08:00">2021-02-19</time>
             </span>
@@ -259,18 +264,13 @@
     <div class="post-body" itemprop="articleBody">
 
       
-          <blockquote>
-<p>参考：</p>
-<p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Signed_number_representations">https://en.wikipedia.org/wiki/Signed_number_representations</a></p>
-<p><a target="_blank" rel="noopener" href="https://zh.wikipedia.org/wiki/%E6%9C%89%E7%AC%A6%E8%99%9F%E6%95%B8%E8%99%95%E7%90%86">https://zh.wikipedia.org/wiki/%E6%9C%89%E7%AC%A6%E8%99%9F%E6%95%B8%E8%99%95%E7%90%86</a></p>
-</blockquote>
-<p>计算机中符号数常用的表示方法：</p>
+          <p>计算机中符号数常用的表示方法：</p>
 <ul>
 <li>原码</li>
 <li>反码</li>
 <li>补码</li>
 </ul>
-<p>这三种表示方法均有符号位和数值位两部分，符号位都是用0表示”+”，用1表示”-“。而数值位，三种表示方法各不相同。</p>
+<p>这三种表示方法均有符号位和数值位两部分，符号位都是用 0 表示 “+”，用 1 表示 “-“。而数值位，三种表示方法各不相同。</p>
           <!--noindex-->
             <div class="post-button">
               <a class="btn" href="/2021/02/19/signed-number-representations/#more" rel="contents">
@@ -319,7 +319,7 @@
               <span class="post-meta-item-icon">
                 <i class="far fa-calendar"></i>
               </span>
-              <span class="post-meta-item-text">发表于</span>
+              <span class="post-meta-item-text">Posted on</span>
 
               <time title="创建时间：2021-02-18 11:49:09" itemprop="dateCreated datePublished" datetime="2021-02-18T11:49:09+08:00">2021-02-18</time>
             </span>
@@ -551,6 +551,61 @@
 
 
   
+
+  
+      
+
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
